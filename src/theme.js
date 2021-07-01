@@ -17,9 +17,21 @@ const theme = {
       cursor: 'pointer'
     }
   },
+  fonts: {
+    body: 'Mulish, sans-serif',
+    heading: 'Mulish, sans-serif'
+  },
+  text: {
+    default: {
+      lineHeight: 1.5
+    }
+  },
   styles: {
     a: {
       textDecoration: 'none'
+    },
+    root: {
+      margin: 0
     }
   }
 }

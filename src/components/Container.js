@@ -3,7 +3,7 @@ import {Box} from "theme-ui";
 const Container = ({ children }) => {
   return (
     <Box sx={{
-      width: 1320,
+      width: 960,
       margin: 'auto'
     }
     }>

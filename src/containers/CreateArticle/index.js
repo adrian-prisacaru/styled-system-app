@@ -4,17 +4,18 @@ import TextArea from "../../components/TextArea";
 import Form from "../../components/Form";
 import {useState} from "react";
 import LocalStorageDB from "local-storage-db";
+import { useHistory } from "react-router-dom";
 
 const db = new LocalStorageDB('documents');
 
 const CreateArticle = () => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const history = useHistory()
 
   const onSubmit = () => {
     db.create('articles', { title, content });
-    setTitle('')
-    setContent('')
+    history.push('/')
   }
 
   return (
