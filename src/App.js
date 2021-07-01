@@ -1,7 +1,15 @@
+import Container from "./components/Container";
+import CreateArticle from "./containers/CreateArticle";
+import { ThemeProvider } from 'theme-ui'
+import theme from './theme'
+
 function App() {
   return (
-    <div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <CreateArticle/>
+      </Container>
+    </ThemeProvider>
   );
 }
 
