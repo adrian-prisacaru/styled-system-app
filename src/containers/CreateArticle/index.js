@@ -19,7 +19,7 @@ const CreateArticle = () => {
 
   return (
     <>
-      <Heading as="h1" mt={4}>New Article</Heading>
+      <Heading as="h1">New Article</Heading>
       <Form mt={4} onSubmit={onSubmit}>
         <TextInput name="title" value={title} onChange={setTitle}/>
         <TextArea name="content" value={content} onChange={setContent}/>

@@ -9,11 +9,13 @@ import {
 } from "react-router-dom";
 import Articles from "./containers/Articles";
 import NotFound from "./containers/NotFound";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
+        <Header/>
         <Container>
           <Switch>
             <Route exact path="/">
