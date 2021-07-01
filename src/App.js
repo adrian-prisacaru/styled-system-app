@@ -2,14 +2,33 @@ import Container from "./components/Container";
 import CreateArticle from "./containers/CreateArticle";
 import { ThemeProvider } from 'theme-ui'
 import theme from './theme'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Articles from "./containers/Articles";
+import NotFound from "./containers/NotFound";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <CreateArticle/>
-      </Container>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Switch>
+            <Route exact path="/">
+              <Articles />
+            </Route>
+            <Route exact path="/articles/new">
+              <CreateArticle />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Container>
+      </ThemeProvider>
+    </Router>
   );
 }
 
